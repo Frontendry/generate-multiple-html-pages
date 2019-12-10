@@ -1,6 +1,6 @@
-## How to generate multiple HTMLs using html-webpack-plugin:
+## How to generate multiple HTMLs using [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin):
 
-See the commented code below to do it:
+See the commented code below on how to do it:
 
 ### Project Structure
 
@@ -44,7 +44,7 @@ const multipleHtmlsWebpackPlugin = function() {
     withFileTypes: true
   });
 
-    // Get files only and remove subfolders(partials folder in this case)
+    // Get files only and remove subfolders(the partials folder in this case)
   let templateFiles = dirents.filter(dirent => !dirent.isDirectory());
 
     // Go through each file and return the dynamic HtmlWebpackPlugin config
