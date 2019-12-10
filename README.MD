@@ -60,10 +60,10 @@ const multipleHtmlsWebpackPlugin = function() {
 
     // Fix the above values into the HtmlWebpackPlugin config
     return new HtmlWebpackPlugin({
-      template: path.join(__dirname, "src/html/") + name + "." + extension,
-      filename: "../../" + name + ".html", // the generated HTML file path is inregards to the outputted js(bundled js)
-      inject: true,
-      title: "HTML Page Title"
+        template: `${path.join(__dirname, "src/html/")}${name}.${extension}`,
+        filename: `../../${name}.html`, // the generated HTML file path is relative to the outputted js(bundled js)
+        inject: true,
+        title: "HTML Page Title"
     });
   });
 
