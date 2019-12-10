@@ -1,4 +1,6 @@
-## How to use:
+## How to generate multiple HTMLs using html-webpack-plugin:
+
+See the commented code below to do it:
 
 ### Project Structure
 
