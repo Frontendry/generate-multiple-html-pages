@@ -31,6 +31,7 @@ application-folder-structure
 // webpack.config.js
 
 ...
+
 const path = require("path");
 const fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -80,6 +81,7 @@ let webpackConfig = {
 
     plugins: [
         ...
+
     ].concat(multipleHtmlsWebpackPlugin())
 }
 
