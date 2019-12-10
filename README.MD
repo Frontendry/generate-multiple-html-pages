@@ -2,6 +2,7 @@
 
 ## Project Structure
 
+```
 sample-application-structure
 |--dist
 |------assets
@@ -18,6 +19,7 @@ sample-application-structure
 |----------partials
 |----------about.ejs
 |----------index.ejs
+```
 
 ```javascript
 // webpack.config.js
