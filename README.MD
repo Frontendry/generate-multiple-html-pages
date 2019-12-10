@@ -41,7 +41,7 @@ const multipleHtmlsWebpackPlugin = function() {
     withFileTypes: true
   });
 
-    // Get files only and remove subfolders(partials in this case)
+    // Get files only and remove subfolders(partials folder in this case)
   let templateFiles = dirents.filter(dirent => !dirent.isDirectory());
 
     // Go through each file and return the dynamic HtmlWebpackPlugin config
@@ -64,7 +64,7 @@ const multipleHtmlsWebpackPlugin = function() {
     });
   });
 
-  // Return the generated HTMLs
+  // Return the generated HtmlWebpackPlugin config
   return templateFilesGenerateHtmls;
 };
 
