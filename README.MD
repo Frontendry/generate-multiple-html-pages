@@ -1,6 +1,6 @@
 ## How to use:
 
-## Project Structure
+### Project Structure
 
 ```
 application-folder-structure
@@ -24,6 +24,8 @@ application-folder-structure
 |----------about.ejs
 |----------index.ejs
 ```
+
+### webpack.config.js
 
 ```javascript
 // webpack.config.js
