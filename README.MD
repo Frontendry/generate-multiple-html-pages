@@ -3,11 +3,15 @@
 ## Project Structure
 
 ```
-sample-application-structure
+application-folder-structure
 |--dist
 |------assets
+|----------css
+|----------imgs
 |----------js
-|---------------main.js*(Bundled js)*
+|---------------main.js //bundled js
+|------about.html // Generated about.html file
+|------index.html // Generated index.html file
 |--node_modules
 |--src
 |------assets
@@ -34,14 +38,21 @@ const multipleHtmlsWebpackPlugin = function() {
     withFileTypes: true
   });
 
-    // Get files only and remove subfolders
+    // Get files only and remove subfolders(partials in this case)
   let templateFiles = dirents.filter(dirent => !dirent.isDirectory());
 
+    // Go through each file and return the dynamic HtmlWebpackPlugin config
   let templateFilesGenerateHtmls = templateFiles.map(function(templateFile) {
+      // Split the file into:
     let parts = templateFile.name.split(".");
+
+    // its file name
     let name = parts[0];
+
+    // its extension
     let extension = parts[1];
 
+    // Fix the above values into the HtmlWebpackPlugin config
     return new HtmlWebpackPlugin({
       template: path.join(__dirname, "src/html/") + name + "." + extension,
       filename: "../../" + name + ".html", // the generated HTML file path is inregards to the outputted js(bundled js)
@@ -49,6 +60,8 @@ const multipleHtmlsWebpackPlugin = function() {
       title: "HTML Page Title"
     });
   });
+
+  // Return the generated HTMLs
   return templateFilesGenerateHtmls;
 };
 
