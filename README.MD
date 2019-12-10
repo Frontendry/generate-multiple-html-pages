@@ -35,10 +35,11 @@ application-folder-structure
 ...
 
 const path = require("path");
-const fs = require("fs");
+const fs = require("fs"); // A native module for effectively working with files built on top of Node's famous fs module. The fs module comes with Node so it is already available to you.
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const multipleHtmlsWebpackPlugin = function() {
+    // Use fs to read your html templates folder
   let dirents = fs.readdirSync(path.join(__dirname, "src/html"), {
     withFileTypes: true
   });
