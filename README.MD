@@ -17,10 +17,10 @@ application-folder-structure
 |--node_modules
 |--src
 |------assets
-|------imgs
-|------js
-|----------app.js
-|------scss
+|----------imgs
+|----------js
+|---------------app.js
+|----------scss
 |------html
 |----------partials
 |----------about.ejs
