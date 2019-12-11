@@ -19,12 +19,13 @@ application-folder-structure
 |------assets
 |----------imgs
 |----------js
-|---------------app.js
 |----------scss
 |------html
 |----------partials
 |----------about.ejs
 |----------index.ejs
+|------app.js
+
 ```
 
 ### webpack.config.js
